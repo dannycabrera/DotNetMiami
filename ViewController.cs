@@ -46,18 +46,20 @@ namespace DotNetMiami
 				if (_context.CanEvaluatePolicy (LAPolicy.DeviceOwnerAuthenticationWithBiometrics, out _error)) {
 
 					// Get enrollment state
-					var policyState = _context.EvaluatedPolicyDomainState.ToString().Replace("<", "").Replace(">", "").Replace(" ", "");
+					if (_context.EvaluatedPolicyDomainState != null) {
+						var policyState = _context.EvaluatedPolicyDomainState.ToString().Replace("<", "").Replace(">", "").Replace(" ", "");
 
-					if (TouchIDPolicyDomainState != null)
-					{
-						if (policyState != TouchIDPolicyDomainState)
-							Console.WriteLine("Fingerprints enrollments changed.");
-						else
-							Console.WriteLine("Fingerprints enrollments remain the same.");
+						if (TouchIDPolicyDomainState != null)
+						{
+							if (policyState != TouchIDPolicyDomainState)
+								Console.WriteLine("Fingerprints enrollments changed.");
+							else
+								Console.WriteLine("Fingerprints enrollments remain the same.");
+						}
+
+						// Store enrollment
+						TouchIDPolicyDomainState = policyState;
 					}
-
-					// Store enrollment
-					TouchIDPolicyDomainState = policyState;
 
 					var replyHandler = new LAContextReplyHandler ((success, error) => {
 						InvokeOnMainThread (() => {
