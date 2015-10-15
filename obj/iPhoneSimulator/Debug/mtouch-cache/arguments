@@ -1,0 +1,39 @@
+# Version: 9.0.1.29 (xcode7-c5: 1d27ac2)
+# [first argument, ignore] # /Users/DannyC/Projects/GitHub/DotNetMiami/mtouch.exe
+/Library/Frameworks/Xamarin.iOS.framework/Versions/9.0.1.29/bin/mtouch \
+	--cache \
+	/Users/DannyC/Projects/GitHub/DotNetMiami/obj/iPhoneSimulator/Debug/mtouch-cache \
+	--sim \
+	/Users/DannyC/Projects/GitHub/DotNetMiami/bin/iPhoneSimulator/Debug/DotNetMiami.app \
+	--executable \
+	DotNetMiami \
+	--debug \
+	--profiling \
+	--nolink \
+	--sdkroot \
+	/Applications/Xcode.app/Contents/Developer \
+	--sdk \
+	9.0 \
+	--targetver \
+	9.0 \
+	--abi=i386 \
+	--symbollist \
+	/Users/DannyC/Projects/GitHub/DotNetMiami/obj/iPhoneSimulator/Debug/mtouch-symbols.list \
+	--dsym=no \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.Xml.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Xamarin.iOS.dll \
+	-r \
+	/Users/DannyC/Projects/GitHub/DotNetMiami/packages/Xamarin.TestCloud.Agent.0.13.0/lib/Xamarin.iOS10/Calabash.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.Core.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/mscorlib.dll \
+	-r \
+	/Users/DannyC/Projects/GitHub/DotNetMiami/packages/Xamarin.TestCloud.Agent.0.13.0/lib/Xamarin.iOS10/Calabash.dll \
+	--target-framework \
+	"Xamarin.iOS,v1.0" \
+	/Users/DannyC/Projects/GitHub/DotNetMiami/bin/iPhoneSimulator/Debug//DotNetMiami.exe \
